@@ -11,8 +11,11 @@
             <div class="searchBox">
               <input type="text" [class.is-invalid]="weatherSearchForm.get('location')?.invalid && weatherSearchForm.get('location')?.touched"
               placeholder="Enter your city Name" class="form-control" formControlName="location">
-              <button type="submit" class="form-control btn btn-primary btn-md ml-3" (click)="weatherData()" [disabled]="!weatherSearchForm.valid"><span><i
-                    class="fa fa-question-circle" aria-hidden="true"></i></span>&nbsp;Search</button>
+              <button type="submit" class="form-control btn btn-primary btn-md ml-3" (click)="weatherData()" [disabled]="!weatherSearchForm.valid">
+                <span>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>
+                </span>&nbsp;Search
+              </button>
               <div class="spinner-border ml-3" role="status" *ngIf="loader">
                 <span class="sr-only">Loading...</span>
               </div>
